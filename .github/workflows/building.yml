@@ -11,17 +11,17 @@ permissions:
 on:
   # Allow to re-use this jobs;
   workflow_call:
-  # Trigger minor update;
-  # Trigger patch update;
-  #push:
-  # Trigger major update;
-  workflow_dispatch:
     inputs:
       tag:
         description: 'Custom tag which will be used during publising'
         default: '1.0.0'
         required: false
         type: string
+  # Trigger minor update;
+  # Trigger patch update;
+  #push:
+  # Trigger major update;
+  workflow_dispatch:
 
 
 jobs:
