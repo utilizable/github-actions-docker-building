@@ -5,12 +5,6 @@ name: github-packages
 on:
   # Allow to re-use this jobs;
   workflow_call:
-    inputs:
-      tag:
-        description: 'Custom tag which will be used during publising'
-        default: '1.0.0'
-        required: false
-        type: string
 
 # Defines two custom environment variables for the workflow. These are used for the Container registry domain, and a name for the Docker image that this workflow builds.
 env:
