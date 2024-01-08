@@ -4,20 +4,12 @@ name: building
 
 # Allow repository modyfication;
 permissions:
-  contents: write
-  pull-requests: write
   packages: write
 
 on:
   # Allow to re-use this jobs;
   workflow_call:
-    inputs:
-      tag:
-        description: 'Custom tag which will be used during publising'
-        default: '1.0.0'
-        required: false
-        type: string
-        
+  
 jobs:
 
 # -----------------
@@ -26,5 +18,3 @@ jobs:
 
   github-packages: 
     uses: ./.github/workflows/github-packages.yml
-    with:
-      tag: ${{ inputs.tag }}
